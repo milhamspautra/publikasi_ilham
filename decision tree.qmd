@@ -1,0 +1,145 @@
+
+---
+title: Play Tennis 
+description: Normalisasi data play tennis
+date: 10/31/2024
+author: M. Ilham Saputra
+categories: [play, tenis]
+draft: false 
+show: true
+freeze: true
+---
+
+```{python}
+# numpy and pandas initialization
+import numpy as np
+import pandas as pd 
+import matplotlib.pyplot as plt
+```
+
+```{python}
+#Loading the PlayTennis data
+playtennis = pd.read_csv("playtennis.csv")
+```
+
+```{python}
+playtennis.head(5)
+```
+
+```{python}
+playtennis['humidity'].hist()
+```
+
+```{python}
+playtennis['outlook'].hist()
+```
+
+```{python}
+playtennis['play'].hist()
+```
+
+```{python}
+ #get unique labels
+print(playtennis['outlook'].unique())
+print(playtennis['temp'].unique())
+print(playtennis['humidity'].unique())
+print(playtennis['windy'].unique())
+print(playtennis['play'].unique())
+```
+
+```{python}
+#using label encoder
+from sklearn.preprocessing import LabelEncoder
+Le = LabelEncoder() #each categorical value is assigned a numerical value(0,1,2...)
+playtennis['outlook'] = Le.fit_transform(playtennis['outlook'])
+playtennis['temp'] = Le.fit_transform(playtennis['temp'])
+playtennis['humidity'] = Le.fit_transform(playtennis['humidity'])
+playtennis['windy'] = Le.fit_transform(playtennis['windy'])
+playtennis['play'] = Le.fit_transform(playtennis['play'])
+```
+
+```{python}
+#After applying label encoding, each unique column labels is converted into unique numerical values between 0 to number of labels in each column
+#each value represent a unique label e.g in "outlook" column 2 is the label for "sunny", 0 is the label for "overcast", and 1 is a label for "rainy".
+print(playtennis['outlook'].unique())
+print(playtennis['temp'].unique())
+print(playtennis['humidity'].unique())
+print(playtennis['windy'].unique())
+print(playtennis['play'].unique())
+```
+
+```{python}
+playtennis
+```
+
+```{python}
+y = playtennis['play'] #decision column
+x = playtennis.drop(['play'],axis=1) #dropping
+```
+
+```{python}
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test  = train_test_split(x,y,test_size = 0.2) #split the data
+```
+
+```{python}
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import metrics
+```
+
+```{python}
+# building decision tree
+clf=DecisionTreeClassifier()
+clf=clf.fit(x_train,y_train)
+y_pred=clf.predict(x_test)
+```
+
+```{python}
+print("Accuracy:", metrics.accuracy_score(y_test,y_pred))
+```
+
+```{python}
+def predict_play():
+    Le = LabelEncoder()
+
+    outlook = "sunny"
+    temp = "cool"
+    humidity = "normal"
+    windy = "True"
+
+    windy = True if windy.lower() == 'true' else False
+
+    user_input = pd.DataFrame({'outlook': [outlook],
+                               'temp' : [temp],
+                               'humidity': [humidity],
+                               'windy' : [windy]})
+    for column in x.columns : 
+        user_input[column] = Le.fit_transform(user_input[column])
+    prediction = clf.predict(user_input)
+    prediction = "yes" if prediction[0] == 1 else "no"
+    print("Based on the conditiond, should you play tennis?", prediction)
+predict_play()
+```
+
+```{python}
+!pip install dtreeviz
+```
+
+```{python}
+from sklearn import tree
+```
+
+```{python}
+from dtreeviz.trees import *
+```
+
+```{python}
+text_representation = tree.export_text(clf)
+print(text_representation)
+```
+
+```{python}
+fig = plt.figure(figsize=(7,8))
+tree.plot_tree(clf, feature_names=x.columns, class_names=['yes', 'no'], filled=True)
+```
+

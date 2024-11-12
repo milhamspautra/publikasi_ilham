@@ -1,0 +1,23 @@
+---
+title: Tempat Belajar Coding
+description: Belajar coding harus dimulai dari niat diri sendiri sehingga jika kita memulainya maka tidak ada hambatan selama proses belajar
+date: 10/28/2024
+author: M. Ilham Saputra
+categories: [belajar, coding]
+draft: false
+show: true
+freeze: true
+---
+
+
+
++-----+----------------------------------+
+| No. | Nama File                        |
++=====+==================================+
+| 1.  | [play tennis](decision tree.qmd) |
++-----+----------------------------------+
+| 2.  | [titanic](titanic.qmd)           |
++-----+----------------------------------+
+| 3.  | [prakiraan cuaca](weather.qmd)   |
++-----+----------------------------------+
+: {.striped .hover}

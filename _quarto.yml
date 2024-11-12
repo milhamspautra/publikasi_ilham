@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  sidebar:
+    contents: 
+      - href: table.qmd
+        text: "Home"
+      - href: decision tree.qmd
+        text: "Bermain Tennis"
+      - href: weather.qmd
+        text: "Prakiraan Cuaca"
+      - href: titanic.qmd
+        text: "Kapal Titanic"
+
+format:
+  html: 
+    theme: cosmo
+    css: style.css
+    toc: true
+
+
