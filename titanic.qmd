@@ -387,7 +387,7 @@ with open("tree1.dot", 'w') as f:
                               filled= True )
         
 #Convert .dot to .png to allow display in web notebook
-check_call(['dot','-Tpng','tree1.dot','-o','tree1.png'])
+check_call(['dot','-T','png','tree1.dot','-o','tree1.png'])
 
 # Annotating chart with PIL
 img = Image.open("tree1.png")
