@@ -14,7 +14,7 @@ jobs:
       contents: write
     steps:
       - name: install requirement
-        run : python3 -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn
+        run : python3 -m pip install jupyter pandas numpy matplotlib seaborn scikit-learn category_encoders do
 
       - name: Check out repository
         uses: actions/checkout@v4
