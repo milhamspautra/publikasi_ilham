@@ -215,17 +215,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="92d8ebda" class="cell" data-execution_count="1">
+<div id="6f5abdd8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numpy and pandas initialization</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a777e40e" class="cell" data-execution_count="2">
+<div id="3d5a5b33" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Loading the PlayTennis data</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>playtennis <span class="op">=</span> pd.read_csv(<span class="st">"playtennis.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f6472029" class="cell" data-execution_count="3">
+<div id="6ec02357" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>playtennis.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="6744b3fa" class="cell" data-execution_count="4">
+<div id="e7013e16" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>playtennis[<span class="st">'humidity'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -299,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="d02cf921" class="cell" data-execution_count="5">
+<div id="9f83fba4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>playtennis[<span class="st">'outlook'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="0c6bb2df" class="cell" data-execution_count="6">
+<div id="aafd06e3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>playtennis[<span class="st">'play'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -319,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="c4e24d09" class="cell" data-execution_count="7">
+<div id="1c1592cf" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a> <span class="co">#get unique labels</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'outlook'</span>].unique())</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'temp'</span>].unique())</span>
@@ -334,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ['no' 'yes']</code></pre>
 </div>
 </div>
-<div id="ae215a66" class="cell" data-execution_count="8">
+<div id="26d2c812" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#using label encoder</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Le <span class="op">=</span> LabelEncoder() <span class="co">#each categorical value is assigned a numerical value(0,1,2...)</span></span>
@@ -343,19 +343,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>playtennis[<span class="st">'humidity'</span>] <span class="op">=</span> Le.fit_transform(playtennis[<span class="st">'humidity'</span>])</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>playtennis[<span class="st">'windy'</span>] <span class="op">=</span> Le.fit_transform(playtennis[<span class="st">'windy'</span>])</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>playtennis[<span class="st">'play'</span>] <span class="op">=</span> Le.fit_transform(playtennis[<span class="st">'play'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.4
-  warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"</code></pre>
 </div>
-</div>
-<div id="3eb3f7e3" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#After applying label encoding, each unique column labels is converted into unique numerical values between 0 to number of labels in each column</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#each value represent a unique label e.g in "outlook" column 2 is the label for "sunny", 0 is the label for "overcast", and 1 is a label for "rainy".</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'outlook'</span>].unique())</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'temp'</span>].unique())</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'humidity'</span>].unique())</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'windy'</span>].unique())</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'play'</span>].unique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fc05e6e4" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#After applying label encoding, each unique column labels is converted into unique numerical values between 0 to number of labels in each column</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#each value represent a unique label e.g in "outlook" column 2 is the label for "sunny", 0 is the label for "overcast", and 1 is a label for "rainy".</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'outlook'</span>].unique())</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'temp'</span>].unique())</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'humidity'</span>].unique())</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'windy'</span>].unique())</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(playtennis[<span class="st">'play'</span>].unique())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[2 0 1]
 [1 2 0]
@@ -364,8 +360,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [0 1]</code></pre>
 </div>
 </div>
-<div id="7bc3917a" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>playtennis</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dec54b15" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>playtennis</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 
@@ -500,143 +496,139 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="05d61e97" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> playtennis[<span class="st">'play'</span>] <span class="co">#decision column</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> playtennis.drop([<span class="st">'play'</span>],axis<span class="op">=</span><span class="dv">1</span>) <span class="co">#dropping</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6e759715" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> playtennis[<span class="st">'play'</span>] <span class="co">#decision column</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> playtennis.drop([<span class="st">'play'</span>],axis<span class="op">=</span><span class="dv">1</span>) <span class="co">#dropping</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="73c03209" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>x_train, x_test, y_train, y_test  <span class="op">=</span> train_test_split(x,y,test_size <span class="op">=</span> <span class="fl">0.2</span>) <span class="co">#split the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5a257871" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x_train, x_test, y_train, y_test  <span class="op">=</span> train_test_split(x,y,test_size <span class="op">=</span> <span class="fl">0.2</span>) <span class="co">#split the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2adeaf2b" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeClassifier</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b35cfcb5" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeClassifier</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0f5e3921" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># building decision tree</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>DecisionTreeClassifier()</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>clf.fit(x_train,y_train)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>y_pred<span class="op">=</span>clf.predict(x_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f18b3cc0" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># building decision tree</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>DecisionTreeClassifier()</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>clf.fit(x_train,y_train)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>y_pred<span class="op">=</span>clf.predict(x_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="edf39971" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accuracy:"</span>, metrics.accuracy_score(y_test,y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b5bdc5fd" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accuracy:"</span>, metrics.accuracy_score(y_test,y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.6666666666666666</code></pre>
 </div>
 </div>
-<div id="8b0584d8" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict_play():</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    Le <span class="op">=</span> LabelEncoder()</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    outlook <span class="op">=</span> <span class="st">"sunny"</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> <span class="st">"cool"</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    humidity <span class="op">=</span> <span class="st">"normal"</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    windy <span class="op">=</span> <span class="st">"True"</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    windy <span class="op">=</span> <span class="va">True</span> <span class="cf">if</span> windy.lower() <span class="op">==</span> <span class="st">'true'</span> <span class="cf">else</span> <span class="va">False</span></span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    user_input <span class="op">=</span> pd.DataFrame({<span class="st">'outlook'</span>: [outlook],</span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'temp'</span> : [temp],</span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'humidity'</span>: [humidity],</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'windy'</span> : [windy]})</span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> column <span class="kw">in</span> x.columns : </span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>        user_input[column] <span class="op">=</span> Le.fit_transform(user_input[column])</span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> clf.predict(user_input)</span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> <span class="st">"yes"</span> <span class="cf">if</span> prediction[<span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">"no"</span></span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Based on the conditiond, should you play tennis?"</span>, prediction)</span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>predict_play()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="58980279" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict_play():</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    Le <span class="op">=</span> LabelEncoder()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    outlook <span class="op">=</span> <span class="st">"sunny"</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> <span class="st">"cool"</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    humidity <span class="op">=</span> <span class="st">"normal"</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    windy <span class="op">=</span> <span class="st">"True"</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    windy <span class="op">=</span> <span class="va">True</span> <span class="cf">if</span> windy.lower() <span class="op">==</span> <span class="st">'true'</span> <span class="cf">else</span> <span class="va">False</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    user_input <span class="op">=</span> pd.DataFrame({<span class="st">'outlook'</span>: [outlook],</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'temp'</span> : [temp],</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'humidity'</span>: [humidity],</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'windy'</span> : [windy]})</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> column <span class="kw">in</span> x.columns : </span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>        user_input[column] <span class="op">=</span> Le.fit_transform(user_input[column])</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> clf.predict(user_input)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> <span class="st">"yes"</span> <span class="cf">if</span> prediction[<span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">"no"</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Based on the conditiond, should you play tennis?"</span>, prediction)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>predict_play()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Based on the conditiond, should you play tennis? yes</code></pre>
 </div>
 </div>
-<div id="1f4d67da" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install dtreeviz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="89717df0" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install dtreeviz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: dtreeviz in /home/ilham/.local/lib/python3.10/site-packages (2.2.2)
-Requirement already satisfied: graphviz&gt;=0.9 in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (0.20.3)
-Requirement already satisfied: scikit-learn in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (1.5.1)
-Requirement already satisfied: numpy in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (1.26.4)
-Requirement already satisfied: colour in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (0.1.5)
-Requirement already satisfied: matplotlib in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (3.9.2)
-Requirement already satisfied: pandas in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (2.2.2)
-Requirement already satisfied: pytest in /home/ilham/.local/lib/python3.10/site-packages (from dtreeviz) (8.3.3)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /home/ilham/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (2.9.0.post0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/lib/python3/dist-packages (from matplotlib-&gt;dtreeviz) (4.29.1)
-Requirement already satisfied: pillow&gt;=8 in /usr/lib/python3/dist-packages (from matplotlib-&gt;dtreeviz) (9.0.1)
+Collecting dtreeviz
+  Downloading dtreeviz-2.2.2-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/91.8 KB ? eta -:--:--     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.8/91.8 KB 4.8 MB/s eta 0:00:00
+Collecting pytest
+  Downloading pytest-8.3.3-py3-none-any.whl (342 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/342.3 KB ? eta -:--:--     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 342.3/342.3 KB 37.4 MB/s eta 0:00:00
+Requirement already satisfied: numpy in /home/runner/.local/lib/python3.10/site-packages (from dtreeviz) (2.1.3)
+Requirement already satisfied: scikit-learn in /home/runner/.local/lib/python3.10/site-packages (from dtreeviz) (1.5.2)
+Collecting colour
+  Downloading colour-0.1.5-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: pandas in /home/runner/.local/lib/python3.10/site-packages (from dtreeviz) (2.2.3)
+Requirement already satisfied: matplotlib in /home/runner/.local/lib/python3.10/site-packages (from dtreeviz) (3.9.2)
+Collecting graphviz&gt;=0.9
+  Downloading graphviz-0.20.3-py3-none-any.whl (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/47.1 KB ? eta -:--:--     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.1/47.1 KB 4.2 MB/s eta 0:00:00
+Requirement already satisfied: fonttools&gt;=4.22.0 in /home/runner/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (4.55.0)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib-&gt;dtreeviz) (24.2)
+Requirement already satisfied: cycler&gt;=0.10 in /home/runner/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (0.12.1)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /home/runner/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (1.4.7)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/lib/python3/dist-packages (from matplotlib-&gt;dtreeviz) (2.4.7)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/lib/python3/dist-packages (from matplotlib-&gt;dtreeviz) (0.11.0)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/lib/python3/dist-packages (from matplotlib-&gt;dtreeviz) (1.3.2)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /home/ilham/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (1.3.0)
-Requirement already satisfied: packaging&gt;=20.0 in /home/ilham/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (24.0)
+Requirement already satisfied: pillow&gt;=8 in /home/runner/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (11.0.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /home/runner/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (2.9.0.post0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /home/runner/.local/lib/python3.10/site-packages (from matplotlib-&gt;dtreeviz) (1.3.1)
 Requirement already satisfied: pytz&gt;=2020.1 in /usr/lib/python3/dist-packages (from pandas-&gt;dtreeviz) (2022.1)
-Requirement already satisfied: tzdata&gt;=2022.7 in /home/ilham/.local/lib/python3.10/site-packages (from pandas-&gt;dtreeviz) (2024.1)
-Requirement already satisfied: exceptiongroup&gt;=1.0.0rc8 in /home/ilham/.local/lib/python3.10/site-packages (from pytest-&gt;dtreeviz) (1.2.1)
-Requirement already satisfied: pluggy&lt;2,&gt;=1.5 in /home/ilham/.local/lib/python3.10/site-packages (from pytest-&gt;dtreeviz) (1.5.0)
-Requirement already satisfied: tomli&gt;=1 in /home/ilham/.local/lib/python3.10/site-packages (from pytest-&gt;dtreeviz) (2.0.1)
-Requirement already satisfied: iniconfig in /home/ilham/.local/lib/python3.10/site-packages (from pytest-&gt;dtreeviz) (2.0.0)
-Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /home/ilham/.local/lib/python3.10/site-packages (from scikit-learn-&gt;dtreeviz) (3.5.0)
-Requirement already satisfied: scipy&gt;=1.6.0 in /usr/lib/python3/dist-packages (from scikit-learn-&gt;dtreeviz) (1.8.0)
-Requirement already satisfied: joblib&gt;=1.2.0 in /home/ilham/.local/lib/python3.10/site-packages (from scikit-learn-&gt;dtreeviz) (1.4.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/lib/python3/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;dtreeviz) (1.16.0)</code></pre>
+Requirement already satisfied: tzdata&gt;=2022.7 in /home/runner/.local/lib/python3.10/site-packages (from pandas-&gt;dtreeviz) (2024.2)
+Collecting iniconfig
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Requirement already satisfied: tomli&gt;=1 in /usr/local/lib/python3.10/dist-packages (from pytest-&gt;dtreeviz) (2.1.0)
+Collecting pluggy&lt;2,&gt;=1.5
+  Downloading pluggy-1.5.0-py3-none-any.whl (20 kB)
+Requirement already satisfied: exceptiongroup&gt;=1.0.0rc8 in /home/runner/.local/lib/python3.10/site-packages (from pytest-&gt;dtreeviz) (1.2.2)
+Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /home/runner/.local/lib/python3.10/site-packages (from scikit-learn-&gt;dtreeviz) (3.5.0)
+Requirement already satisfied: scipy&gt;=1.6.0 in /home/runner/.local/lib/python3.10/site-packages (from scikit-learn-&gt;dtreeviz) (1.14.1)
+Requirement already satisfied: joblib&gt;=1.2.0 in /home/runner/.local/lib/python3.10/site-packages (from scikit-learn-&gt;dtreeviz) (1.4.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/lib/python3/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;dtreeviz) (1.16.0)
+Installing collected packages: colour, pluggy, iniconfig, graphviz, pytest, dtreeviz
+Successfully installed colour-0.1.5 dtreeviz-2.2.2 graphviz-0.20.3 iniconfig-2.0.0 pluggy-1.5.0 pytest-8.3.3</code></pre>
 </div>
 </div>
-<div id="0cc0e3e8" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> tree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dd699ded" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> tree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e91d40d2" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dtreeviz.trees <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="26d73cdd" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dtreeviz.trees <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="80f4fe39" class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>text_representation <span class="op">=</span> tree.export_text(clf)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text_representation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="072d764a" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>text_representation <span class="op">=</span> tree.export_text(clf)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text_representation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>|--- feature_2 &lt;= 0.50
-|   |--- feature_0 &lt;= 0.50
-|   |   |--- class: 1
-|   |--- feature_0 &gt;  0.50
+<pre><code>|--- feature_0 &lt;= 0.50
+|   |--- class: 1
+|--- feature_0 &gt;  0.50
+|   |--- feature_2 &lt;= 0.50
+|   |   |--- class: 0
+|   |--- feature_2 &gt;  0.50
 |   |   |--- feature_3 &lt;= 0.50
-|   |   |   |--- feature_1 &lt;= 1.50
-|   |   |   |   |--- class: 0
-|   |   |   |--- feature_1 &gt;  1.50
-|   |   |   |   |--- class: 1
-|   |   |--- feature_3 &gt;  0.50
-|   |   |   |--- class: 0
-|--- feature_2 &gt;  0.50
-|   |--- feature_3 &lt;= 0.50
-|   |   |--- class: 1
-|   |--- feature_3 &gt;  0.50
-|   |   |--- feature_1 &lt;= 1.00
-|   |   |   |--- feature_0 &lt;= 0.50
-|   |   |   |   |--- class: 1
-|   |   |   |--- feature_0 &gt;  0.50
-|   |   |   |   |--- class: 0
-|   |   |--- feature_1 &gt;  1.00
 |   |   |   |--- class: 1
+|   |   |--- feature_3 &gt;  0.50
+|   |   |   |--- feature_1 &lt;= 1.00
+|   |   |   |   |--- class: 0
+|   |   |   |--- feature_1 &gt;  1.00
+|   |   |   |   |--- class: 1
 </code></pre>
 </div>
 </div>
-<div id="33e899e4" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">8</span>))</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>tree.plot_tree(clf, feature_names<span class="op">=</span>x.columns, class_names<span class="op">=</span>[<span class="st">'yes'</span>, <span class="st">'no'</span>], filled<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fcc1c400" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">8</span>))</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>tree.plot_tree(clf, feature_names<span class="op">=</span>x.columns, class_names<span class="op">=</span>[<span class="st">'yes'</span>, <span class="st">'no'</span>], filled<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
-<pre><code>[Text(0.4444444444444444, 0.9, 'humidity &lt;= 0.5\ngini = 0.397\nsamples = 11\nvalue = [3, 8]\nclass = no'),
- Text(0.2222222222222222, 0.7, 'outlook &lt;= 0.5\ngini = 0.5\nsamples = 4\nvalue = [2, 2]\nclass = yes'),
- Text(0.3333333333333333, 0.8, 'True  '),
- Text(0.1111111111111111, 0.5, 'gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = no'),
- Text(0.3333333333333333, 0.5, 'windy &lt;= 0.5\ngini = 0.444\nsamples = 3\nvalue = [2, 1]\nclass = yes'),
- Text(0.2222222222222222, 0.3, 'temp &lt;= 1.5\ngini = 0.5\nsamples = 2\nvalue = [1, 1]\nclass = yes'),
- Text(0.1111111111111111, 0.1, 'gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = yes'),
- Text(0.3333333333333333, 0.1, 'gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = no'),
- Text(0.4444444444444444, 0.3, 'gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = yes'),
- Text(0.6666666666666666, 0.7, 'windy &lt;= 0.5\ngini = 0.245\nsamples = 7\nvalue = [1, 6]\nclass = no'),
- Text(0.5555555555555556, 0.8, '  False'),
- Text(0.5555555555555556, 0.5, 'gini = 0.0\nsamples = 4\nvalue = [0, 4]\nclass = no'),
- Text(0.7777777777777778, 0.5, 'temp &lt;= 1.0\ngini = 0.444\nsamples = 3\nvalue = [1, 2]\nclass = no'),
- Text(0.6666666666666666, 0.3, 'outlook &lt;= 0.5\ngini = 0.5\nsamples = 2\nvalue = [1, 1]\nclass = yes'),
- Text(0.5555555555555556, 0.1, 'gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = no'),
- Text(0.7777777777777778, 0.1, 'gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = yes'),
- Text(0.8888888888888888, 0.3, 'gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = no')]</code></pre>
+<pre><code>[Text(0.2857142857142857, 0.9, 'outlook &lt;= 0.5\ngini = 0.463\nsamples = 11\nvalue = [4, 7]\nclass = no'),
+ Text(0.14285714285714285, 0.7, 'gini = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = no'),
+ Text(0.21428571428571427, 0.8, 'True  '),
+ Text(0.42857142857142855, 0.7, 'humidity &lt;= 0.5\ngini = 0.5\nsamples = 8\nvalue = [4, 4]\nclass = yes'),
+ Text(0.3571428571428571, 0.8, '  False'),
+ Text(0.2857142857142857, 0.5, 'gini = 0.0\nsamples = 3\nvalue = [3, 0]\nclass = yes'),
+ Text(0.5714285714285714, 0.5, 'windy &lt;= 0.5\ngini = 0.32\nsamples = 5\nvalue = [1, 4]\nclass = no'),
+ Text(0.42857142857142855, 0.3, 'gini = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = no'),
+ Text(0.7142857142857143, 0.3, 'temp &lt;= 1.0\ngini = 0.5\nsamples = 2\nvalue = [1, 1]\nclass = yes'),
+ Text(0.5714285714285714, 0.1, 'gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = yes'),
+ Text(0.8571428571428571, 0.1, 'gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = no')]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
@@ -742,7 +734,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/milhamspautra\.github\.io\/publikasi_ilham\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
